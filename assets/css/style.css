@@ -1,0 +1,29 @@
+.title{
+    font-size: 3rem;
+    font-family: var(--ubuntu);
+    font-weight: 700;
+}
+#list{
+    margin: 10% 0;
+    font-size: 1.5rem;
+    font-family: var(--ubuntu);
+    font-weight: 400;
+    color: var(--branco);
+    
+}
+#task{
+    margin-bottom: 5%;
+}
+.card{
+    background-color: var(--cor-card);
+    border-radius: 5%;
+    padding: 2% 5%;
+}
+#btn-task{
+    color: var(--preto);
+}
+#btn-x{
+    width: 10%;
+    padding-top: 2%;
+    
+}

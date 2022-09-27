@@ -1,0 +1,13 @@
+:root{
+    --cor-fundo: #f8e9dd;
+    --cor-card: #ec775f;
+    --branco: #FFFFFF;
+    --preto: #000000;
+
+    --ubuntu: 'Ubuntu', sans-serif;
+}
+body{
+    background-color: var(--cor-fundo);
+    margin: 0% 5%;
+    text-align: center;
+}
