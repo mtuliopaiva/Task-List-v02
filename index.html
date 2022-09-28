@@ -16,19 +16,35 @@
         <link href="./assets/css/base.css" rel="stylesheet">
     </head>
     <body>
-        <main>
+
         <header class="cabecalho container">
-            <h1 class="title">My tasks to do</h1>
-            <div class="card">
-            <ul id="list">
-                <li id="task">Acordar às 06 horas<a id="btn-task">x</a></li>
-                <li id="task">Tomar banho<a id="btn-task">x</a></li>
-                <li id="task">Passear com cachorro<a id="btn-task">x</a></li>
-            </ul>
+            <h1 class="title">Tasks to do</h1>
+            <div class="dark-content">
+                <input id="btn-change" type="button">
+                <label for="btn-change" class="change-theme"></label>
+                <p class="text"></p>
+                
             </div>
             
+        </header>
+        <main>
+            <section class="principal container">
+                <div class="add">
+                    <input type="text" id="display" required placeholder="What dou you need to do today?">
+                    <button id="btn-plus">+</button>
+                </div>
+                
+                    
+                <div class="card">
+                    <ul id="list">
+                        <li id="task">Acordar às 06 horas</li>
+                        <li id="task">Tomar banho</li>
+                        <li id="task">Passear com cachorro</li>
+                    </ul>
+                </div>
+            </section>
+
         </main>
-        <footer>
-        </footer>
+        <script src="./main.js"></script>
     </body>
 </html>

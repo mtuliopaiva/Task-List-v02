@@ -2,28 +2,89 @@
     font-size: 3rem;
     font-family: var(--ubuntu);
     font-weight: 700;
+    color: var(--color-title);
+}
+.dark-content{
+    text-align: left;
+    padding-top: 10%;
+    
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    /* box-shadow: 2px 2px 3px 0px var(--cor-card); */
+}
+#btn-change{
+    display: none;
+}
+.change-theme{
+    position: absolute;
+    top: 16%;
+    left: 10%;
+
+    background-image: var(--theme-icon); 
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 15px 15px;
+    cursor: pointer;
+}
+.dark-mode {
+    --theme-icon: url("../img/sun.svg");
+    /* Material design recommend than pure black */
+    --bg-color: #121212; 
+    --plus-btn: #222222;
+    --color-title: #ffffff;
+    --color-card: #272727 ;
+    --color-content:#ffffff;
+    --theme-name:'Light mode'
+}
+main{
+    margin-top: 5%;
+}
+#display{
+    width: 80%;
+    text-align: center;
+    font-family: var(--ubuntu);
+    margin-bottom: 5%;
+    margin-top: 0.5%;
 }
 #list{
     margin: 10% 0;
     font-size: 1.5rem;
     font-family: var(--ubuntu);
     font-weight: 400;
-    color: var(--branco);
+    color: var(--color-content);
     
+}
+.card{
+    background-color: var(--color-card);
+    border-radius: 5%;
+    padding: 2% 5%;
+    height: 300px;
+    max-height: 350px;
 }
 #task{
     margin-bottom: 5%;
 }
-.card{
-    background-color: var(--cor-card);
-    border-radius: 5%;
-    padding: 2% 5%;
+.text{
+    font-family: var(--ubuntu);
+    color: var(--color-content);
 }
-#btn-task{
-    color: var(--preto);
+.text::before{
+    content: var(--theme-name);
 }
-#btn-x{
-    width: 10%;
-    padding-top: 2%;
-    
+.add{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#btn-plus{
+    background: var(--plus-btn);
+    color:var(--branco);
+    cursor: pointer;
+    /* Arredondar o botão */
+    width: 1.875rem;
+    height: 1.875rem;
+    border-radius: 50%;
+    border: none;
+    font-size: 2rem;
+    line-height: 1rem;
+    font-weight: 700;
 }

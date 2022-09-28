@@ -1,13 +1,21 @@
 :root{
-    --cor-fundo: #f8e9dd;
-    --cor-card: #ec775f;
+    --bg-color: #f8e9dd;
+    --color-card: #ec775f;
+    --color-title:#000000;
+    --color-content:#000000;
     --branco: #FFFFFF;
-    --preto: #000000;
+    --plus-btn:#00B050;
+
+    --theme-name:'Dark mode';
+    --theme-icon: url("../img/moon.svg");
 
     --ubuntu: 'Ubuntu', sans-serif;
 }
-body{
-    background-color: var(--cor-fundo);
+.container{
     margin: 0% 5%;
     text-align: center;
+}
+body{
+    background: var(--bg-color);
+    transition: 1s;
 }
