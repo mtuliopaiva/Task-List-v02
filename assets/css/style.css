@@ -33,25 +33,24 @@
     --color-title: #ffffff;
     --color-card: #272727 ;
     --color-content:#ffffff;
-    --theme-name:'Light mode'
+    --theme-name:'Light mode';
+    --clear-btn:#673Ab7;
 }
 main{
     margin-top: 5%;
 }
 #display{
-    width: 80%;
+    width: 70%;
     text-align: center;
     font-family: var(--ubuntu);
     margin-bottom: 5%;
     margin-top: 0.5%;
 }
 #list{
-    margin: 10% 0;
     font-size: 1.5rem;
     font-family: var(--ubuntu);
     font-weight: 400;
     color: var(--color-content);
-    
 }
 .card{
     background-color: var(--color-card);
@@ -60,8 +59,9 @@ main{
     height: 300px;
     max-height: 350px;
 }
-#task{
-    margin-bottom: 5%;
+.task{
+    margin: 2% 0%;
+    cursor: pointer;
 }
 .text{
     font-family: var(--ubuntu);
@@ -87,4 +87,16 @@ main{
     font-size: 2rem;
     line-height: 1rem;
     font-weight: 700;
+}
+#btn-clear{
+    background: var(--clear-btn);
+    color:var(--branco);
+    cursor: pointer;
+    /* Arredondar o botão */
+    width: 1.875rem;
+    height: 1.875rem;
+    border-radius: 50%;
+    border: none;
+    font-size: 1.5rem;
+    line-height: 0.8rem;
 }
