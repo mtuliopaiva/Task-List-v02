@@ -62,7 +62,14 @@ main{
 .task{
     margin: 2% 0%;
     cursor: pointer;
+    transition: .5s ease-in-out;
+    
 }
+.task:hover{
+    background: #f19684;
+    transition: .5s ease-in-out;
+}
+
 .text{
     font-family: var(--ubuntu);
     color: var(--color-content);
@@ -99,4 +106,8 @@ main{
     border: none;
     font-size: 1.5rem;
     line-height: 0.8rem;
+}
+.marked{
+    text-decoration: line-through;
+    opacity: 0.3;
 }
