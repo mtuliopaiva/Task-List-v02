@@ -1,0 +1,11 @@
+.dark-mode {
+    --theme-icon: url("../img/sun.svg");
+    /* Material design recommend than pure black */
+    --bg-color: #121212; 
+    --plus-btn: #222222;
+    --color-title: #ffffff;
+    --color-card: #272727 ;
+    --color-content:#ffffff;
+    --theme-name:'Light mode';
+    --clear-btn:#673Ab7;
+}

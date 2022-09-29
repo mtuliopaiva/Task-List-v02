@@ -1,0 +1,33 @@
+#btn-change{
+    display: none;
+}
+.add{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#btn-plus{
+    background: var(--plus-btn);
+    color:var(--branco);
+    cursor: pointer;
+    /* Arredondar o botão */
+    width: 1.875rem;
+    height: 1.875rem;
+    border-radius: 50%;
+    border: none;
+    font-size: 2rem;
+    line-height: 1rem;
+    font-weight: 700;
+}
+#btn-clear{
+    background: var(--clear-btn);
+    color:var(--branco);
+    cursor: pointer;
+    /* Arredondar o botão */
+    width: 1.875rem;
+    height: 1.875rem;
+    border-radius: 50%;
+    border: none;
+    font-size: 1.5rem;
+    line-height: 0.8rem;
+}

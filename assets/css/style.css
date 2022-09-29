@@ -11,9 +11,6 @@
     /* offset-x | offset-y | blur-radius | spread-radius | color */
     /* box-shadow: 2px 2px 3px 0px var(--cor-card); */
 }
-#btn-change{
-    display: none;
-}
 .change-theme{
     position: absolute;
     top: 16%;
@@ -24,20 +21,6 @@
     background-size: 100%;
     padding: 15px 15px;
     cursor: pointer;
-}
-.dark-mode {
-    --theme-icon: url("../img/sun.svg");
-    /* Material design recommend than pure black */
-    --bg-color: #121212; 
-    --plus-btn: #222222;
-    --color-title: #ffffff;
-    --color-card: #272727 ;
-    --color-content:#ffffff;
-    --theme-name:'Light mode';
-    --clear-btn:#673Ab7;
-}
-main{
-    margin-top: 5%;
 }
 #display{
     width: 70%;
@@ -62,8 +45,7 @@ main{
 .task{
     margin: 2% 0%;
     cursor: pointer;
-    transition: .5s ease-in-out;
-    
+    transition: .5s ease-in-out; 
 }
 .task:hover{
     background: #f19684;
@@ -77,37 +59,44 @@ main{
 .text::before{
     content: var(--theme-name);
 }
-.add{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-#btn-plus{
-    background: var(--plus-btn);
-    color:var(--branco);
-    cursor: pointer;
-    /* Arredondar o botão */
-    width: 1.875rem;
-    height: 1.875rem;
-    border-radius: 50%;
-    border: none;
-    font-size: 2rem;
-    line-height: 1rem;
-    font-weight: 700;
-}
-#btn-clear{
-    background: var(--clear-btn);
-    color:var(--branco);
-    cursor: pointer;
-    /* Arredondar o botão */
-    width: 1.875rem;
-    height: 1.875rem;
-    border-radius: 50%;
-    border: none;
-    font-size: 1.5rem;
-    line-height: 0.8rem;
-}
 .marked{
     text-decoration: line-through;
     opacity: 0.3;
+}
+@media screen and (min-width:768px){
+    .change-theme{
+        position: absolute;
+        top: 15%;
+        left: 10%;
+    
+        background-image: var(--theme-icon); 
+        background-repeat: no-repeat;
+        background-size: 100%;
+        padding: 30px 30px;
+        cursor: pointer;
+    }
+    .text{
+        font-size: 1.875rem;
+    }
+    #display{
+        width: 70%;
+        text-align: center;
+        font-family: var(--ubuntu);
+        font-size: 2rem;
+        margin-bottom: 5%;
+        margin-top: 0.5%;
+    }
+    .task{
+        font-size: 2rem;
+    }
+    .card{
+        background-color: var(--color-card);
+        border-radius: 5%;
+        padding: 2% 5%;
+        height: 450px;
+        max-height: 450px;
+    }
+}
+@media screen and (min-width: 1024px){
+
 }

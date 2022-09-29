@@ -20,3 +20,6 @@ body{
     background: var(--bg-color);
     transition: 1s;
 }
+main{
+    margin-top: 5%;
+}
