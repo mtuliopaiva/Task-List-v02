@@ -1,14 +1,50 @@
 const theme = document.querySelector('.change-theme');
 const task = document.getElementById('display');
+
 const plusButton =  document.getElementById('btn-plus');
 const clearButton = document.getElementById('btn-clear');
+
 const list = document.getElementById('list');
+const item = document.getElementsByTagName('li');
 let id = 0;
 
-plusButton.addEventListener('click', () => {
-    createTask();
-    task.value='';
-;})
+document.addEventListener('keydown', (evento) => {
+    if(evento.code === 'Enter' ){
+        if(task.value!=''){
+            if(list.childNodes.length<10){
+                console.log(evento);
+                createTask();
+            }
+            else{
+                alert('MAX');
+            }
+            task.value='';
+        }
+        else{
+            alert("Please, enter a task");
+        }
+    }
+    if(evento.code ==='Delete'){
+        clearTask();
+    }
+})
+
+plusButton.addEventListener('click' , (evento) => {
+
+    if(task.value!=''){
+        if(list.childNodes.length<10){
+            console.log(evento);
+            createTask();
+        }
+        else{
+            alert('MAX');
+        }
+        task.value='';
+    }
+    else{
+        alert("Please, enter a task");
+    }
+})
 
 clearButton.addEventListener('click', () => {
     clearTask();
@@ -33,26 +69,20 @@ theme.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
 })
 
-
-
-
-
-
-
 function createTask(){
-    // Criado tag li que possui a classe task e o data-atributtes data-id
-
+    // Criado tag li que possui a classe task e 
+    // o data-atributtes data-id
     const newTask = document.createElement("li");
     newTask.classList.add('task');
     newTask.setAttribute('data-id',id);
-    
     newTask.innerHTML = task.value;
     
     list.appendChild(newTask);
-
     id++;
 }
 function clearTask(){
-    const item = document.getElementsByTagName('li');
-    list.remove(item);
+    while (list.firstChild) {
+        list.removeChild(list.firstChild);
+        id=0;
+      }
 }
