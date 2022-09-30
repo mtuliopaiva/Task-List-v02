@@ -6,6 +6,8 @@ const clearButton = document.querySelector('.btn-clear');
 
 const list = document.getElementById('list');
 const item = document.getElementsByTagName('li');
+
+const teste = document.getElementsByClassName('done-task');
 let id = 0;
 
 document.addEventListener('keydown', (evento) => {
@@ -61,7 +63,7 @@ list.addEventListener('click', (evento) => {
     // selected.style.cssText =
     // 'text-decoration: line-through;'
     
-;})
+})
 
 
 theme.addEventListener('click', () => {
@@ -70,15 +72,37 @@ theme.addEventListener('click', () => {
 })
 
 function createTask(){
-    // Criado tag li que possui a classe task e 
+        // Criado tag li que possui a classe task e 
     // o data-atributtes data-id
     const newTask = document.createElement("li");
     newTask.classList.add('task');
     newTask.setAttribute('data-id',id);
-    newTask.innerHTML = task.value;
+
     
+
+    const deleteTask = document.createElement("button");
+    deleteTask.classList.add('delete-task');
+
+ 
+    newTask.innerHTML = task.value;
     list.appendChild(newTask);
     id++;
+
+
+
+
+    // // Criado tag li que possui a classe task e 
+    // // o data-atributtes data-id
+    // const newTask = document.createElement("li");
+    // 
+    // newTask.classList.add('task');
+    // newTask.setAttribute('data-id',id);
+    // newTask.innerHTML = task.value;
+    // 
+    
+    // 
+    // list.appendChild(newTask);
+    // id++;
 }
 function clearTask(){
     while (list.firstChild) {
