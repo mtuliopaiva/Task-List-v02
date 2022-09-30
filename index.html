@@ -18,7 +18,6 @@
         <link href="./assets/css/botoes.css" rel="stylesheet">
     </head>
     <body>
-
         <header class="cabecalho container">
             <h1 class="title">Tasks to do</h1>
             <div class="dark-content">
@@ -33,14 +32,14 @@
             <section class="principal container">
                 <div class="add">
                     <input type="text" id="display" placeholder="What do you need to do today?" required="Enter a task" maxlength="20">
-                    <div class="action-btn">
-                        <button id="btn-plus">Add</button>
-                        <button id="btn-clear">Clear</button>
+                    <div class="action-buttons">
+                        <button class="btn-plus" id="btn-action">Add</button>
+                        <button class="btn-clear" id="btn-action">Clear</button>
                     </div>
                 </div>
                 
                     
-                <div class="card">
+                <div class="card container">
                     <ul id="list"></ul>
                 </div>
             </section>

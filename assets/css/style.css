@@ -19,10 +19,11 @@
     background-image: var(--theme-icon); 
     background-repeat: no-repeat;
     background-size: 100%;
-    padding: 15px 15px;
+    padding: 1rem 1rem;
     cursor: pointer;
 }
 #display{
+    font-size: 1.5rem;
     width: 100%;
     text-align: center;
     font-family: var(--ubuntu);
@@ -38,9 +39,8 @@
 .card{
     background-color: var(--color-card);
     border-radius: 5%;
-    padding: 2% 5%;
-    height: 300px;
-    max-height: 350px;
+    padding: 5% 5%;
+    height: 22rem;
 }
 .task{
     margin: 2% 0%;
@@ -64,39 +64,15 @@
     opacity: 0.3;
 }
 @media screen and (min-width:768px){
-    .change-theme{
-        position: absolute;
-        top: 15%;
-        left: 10%;
-    
-        background-image: var(--theme-icon); 
-        background-repeat: no-repeat;
-        background-size: 100%;
-        padding: 30px 30px;
-        cursor: pointer;
-    }
-    .text{
-        font-size: 1.875rem;
-    }
     #display{
-        width: 70%;
+        font-size: 1rem;
+        width: 100%;
         text-align: center;
         font-family: var(--ubuntu);
-        font-size: 2rem;
         margin-bottom: 5%;
         margin-top: 0.5%;
     }
-    .task{
-        font-size: 2rem;
-    }
-    .card{
-        background-color: var(--color-card);
-        border-radius: 5%;
-        padding: 2% 5%;
-        height: 450px;
-        max-height: 450px;
-    }
+
 }
 @media screen and (min-width: 1024px){
-
 }

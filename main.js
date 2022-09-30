@@ -1,8 +1,8 @@
 const theme = document.querySelector('.change-theme');
 const task = document.getElementById('display');
 
-const plusButton =  document.getElementById('btn-plus');
-const clearButton = document.getElementById('btn-clear');
+const plusButton =  document.querySelector('.btn-plus');
+const clearButton = document.querySelector('.btn-clear');
 
 const list = document.getElementById('list');
 const item = document.getElementsByTagName('li');

@@ -6,32 +6,30 @@
     flex-direction: column;
     justify-content: space-around;
 }
-.action-btn{
+.action-buttons{
     align-items: center;
     margin-bottom: 5%;
 }
-#btn-plus{
+#btn-action{
     background: var(--action-btn);
     color:var(--branco);
     cursor: pointer;
     border-radius: 10%;
     border: none;
-    font-size: 1rem;
-    /* line-height: 1rem; */
+    font-size: 1.5rem;
     font-weight: 700;
     padding: 2% 2%;
-    width: 52px;
+    width: 5rem;
 }
-#btn-clear{
-    background-color: var(--action-btn);
-    color:var(--branco);
-    cursor: pointer;
-    /* Arredondar o botão */
-    border: none;
-    border-radius: 10%;
-    font-size: 1rem;
-    font-weight: 700;
-    padding: 2% 2%;
-    width: 52px;
-    /* line-height: 0.8rem; */
+@media screen and (min-width:768px){
+    #btn-action{
+        font-size: 2rem;
+        width: 8rem;
+    }
+}
+@media screen and (min-width:1024px){
+    #btn-action{
+        font-size: 3rem;
+        width: 10rem;
+    }
 }
