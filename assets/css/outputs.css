@@ -1,0 +1,28 @@
+.card{
+    background-color: var(--color-card);
+    margin: 0 auto;
+    border-radius: 5%;
+    max-width: 450px;
+    height: 20rem;
+}
+#list{
+    padding-top: 3%;
+    padding-bottom: 3%;
+    font-family: var(--ubuntu);
+    font-weight: 400;
+    color: var(--color-content);
+}
+.task{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    cursor: pointer;
+    transition: .5s ease-in-out; 
+}
+.task:hover{
+    background: #f19684;
+    transition: .5s ease-in-out;
+}
+.marked{
+    text-decoration: line-through;
+    opacity: 0.3;
+}

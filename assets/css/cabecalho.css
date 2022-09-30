@@ -1,0 +1,37 @@
+.title{
+    font-size: 3rem;
+    font-family: var(--ubuntu);
+    font-weight: 700;
+    color: var(--color-title);
+}
+.dark-content{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    /* box-shadow: 2px 2px 3px 0px var(--cor-card); */
+}
+#btn-change{
+    display: none;
+}
+.change-theme{
+    background-image: var(--theme-icon); 
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 1.5rem;
+    cursor: pointer;
+}
+.text{
+    font-family: var(--ubuntu);
+    color: var(--color-content);
+    font-size: 1.5rem;
+    
+}
+.text::before{
+    content: var(--theme-name);
+}
+@media screen and (min-width:768px){
+    .dark-content{
+        width: 100%;
+    }
+}

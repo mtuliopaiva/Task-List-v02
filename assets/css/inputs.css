@@ -1,5 +1,15 @@
-#btn-change{
-    display: none;
+
+#display{
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: var(--ubuntu);
+    margin-bottom: 5%;
+    margin-top: 0.5%;
+    border: 1px solid black;
+    width: 100%;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .add{
     display: flex;
@@ -19,17 +29,6 @@
     font-size: 1.5rem;
     font-weight: 700;
     padding: 2% 2%;
-    width: 5rem;
+    width: 6rem;
 }
-@media screen and (min-width:768px){
-    #btn-action{
-        font-size: 2rem;
-        width: 8rem;
-    }
-}
-@media screen and (min-width:1024px){
-    #btn-action{
-        font-size: 3rem;
-        width: 10rem;
-    }
-}
+

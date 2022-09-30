@@ -12,37 +12,41 @@
 
         <link href="./assets/css/reset.css" rel="stylesheet">
         <link href="./assets/css/normalize.css" rel="stylesheet">
-        <link href="./assets/css/style.css" rel="stylesheet">
         <link href="./assets/css/base.css" rel="stylesheet">
+        <link href="./assets/css/cabecalho.css" rel="stylesheet">
         <link href="./assets/css/dark-theme.css" rel="stylesheet">
-        <link href="./assets/css/botoes.css" rel="stylesheet">
+        <link href="./assets/css/inputs.css" rel="stylesheet">
+        <link href="./assets/css/outputs.css" rel="stylesheet">
     </head>
     <body>
         <header class="cabecalho container">
             <h1 class="title">Tasks to do</h1>
             <div class="dark-content">
                 <input id="btn-change" type="button">
-                <label for="btn-change" class="change-theme"></label>
-                <p class="text"></p>
-                
+                <div class="dark-content">
+                    <label for="btn-change" class="change-theme"></label>
+                    <p class="text"></p>
+                </div>
             </div>
-            
         </header>
+
         <main>
-            <section class="principal container">
+            <section class="inputs container">
                 <div class="add">
-                    <input type="text" id="display" placeholder="What do you need to do today?" required="Enter a task" maxlength="20">
+                    <input type="text" id="display" placeholder="What do you need to do today?" required="Enter a task" maxlength="18">
                     <div class="action-buttons">
                         <button class="btn-plus" id="btn-action">Add</button>
                         <button class="btn-clear" id="btn-action">Clear</button>
                     </div>
                 </div>
+            </section>
                 
-                    
-                <div class="card container">
+            <section class="outputs container"> 
+                <div class="card">
                     <ul id="list"></ul>
                 </div>
             </section>
+            
 
         </main>
         <script src="./main.js"></script>
