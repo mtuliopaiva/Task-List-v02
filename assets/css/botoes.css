@@ -11,8 +11,8 @@
     color:var(--branco);
     cursor: pointer;
     /* Arredondar o botão */
-    width: 1.875rem;
-    height: 1.875rem;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     border: none;
     font-size: 2rem;
@@ -24,9 +24,9 @@
     color:var(--branco);
     cursor: pointer;
     /* Arredondar o botão */
-    width: 1.875rem;
-    height: 1.875rem;
-    /* border-radius: 50%; */
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
     border: none;
     font-size: 1.5rem;
     /* line-height: 0.8rem; */
