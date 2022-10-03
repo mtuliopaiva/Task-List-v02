@@ -36,7 +36,7 @@ plusButton.addEventListener('click', (evento) => {
             "id":id
         }
             if(itens.length>=10){
-                alert("Excedido número de tarefas");
+                alert("Maximum number of tasks exceeded");
             }
             else{
                 // Atualiza minha lista
@@ -59,7 +59,8 @@ plusButton.addEventListener('click', (evento) => {
 
 clearButton.addEventListener('click', () => {
     clearTask();
-;})
+    itens.length=0;
+})
 function createTask(newItem){
     // Criado tag li que possui a classe task e 
     // o data-atributtes data-id
@@ -73,8 +74,10 @@ function createTask(newItem){
 }
 function clearTask(){
     while (list.firstChild) {
+        task.value='';
+        localStorage.clear();
+        
         list.removeChild(list.firstChild);
         id=0;
       }
-      localStorage.clear()
 }
