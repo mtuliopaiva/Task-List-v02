@@ -5,108 +5,76 @@ const plusButton =  document.querySelector('.btn-plus');
 const clearButton = document.querySelector('.btn-clear');
 
 const list = document.getElementById('list');
-const item = document.getElementsByTagName('li');
 
-const teste = document.getElementsByClassName('done-task');
 let id = 0;
 
-document.addEventListener('keydown', (evento) => {
-    if(evento.code === 'Enter' ){
-        if(task.value!=''){
-            if(list.childNodes.length<10){
-                console.log(evento);
-                createTask();
-            }
-            else{
-                alert('MAX');
-            }
-            task.value='';
-        }
-        else{
-            alert("Please, enter a task");
-        }
-    }
-    if(evento.code ==='Delete'){
-        clearTask();
-    }
+/*Declarando itens e parseando o array (dividindo o array), em caso de false cria array vazio*/ 
+const itens = JSON.parse(localStorage.getItem("tasks")) || [];
+
+// Necessario iterar o array para criar os elementos:
+itens.forEach ((elemento) => {
+    // Na iteração, chamada a função cria elemento com o parametro elemento passado que são
+    // os objetos parseados do array e atualiza meu localStorage
+    createTask(elemento);
 })
-
-plusButton.addEventListener('click' , (evento) => {
-
-    if(task.value!=''){
-        if(list.childNodes.length<10){
-            console.log(evento);
-            createTask();
-        }
-        else{
-            alert('MAX');
-        }
-        task.value='';
-    }
-    else{
-        alert("Please, enter a task");
-    }
-})
-
-clearButton.addEventListener('click', () => {
-    clearTask();
-;})
-
+// Funcionalidade de task done ao finalizar tarefa
 list.addEventListener('click', (evento) => {
     const selected = evento.target;
-    console.log(evento);
-    console.log(evento.target);
-    console.log(evento.target.dataset);
-
     selected.classList.toggle('marked');
-
-    // selected.style.cssText =
-    // 'text-decoration: line-through;'
-    
 })
-
-
+// Implementando Dark mode
 theme.addEventListener('click', () => {
     theme.classList.toggle('dark-mode');
     document.body.classList.toggle('dark-mode');
 })
 
-function createTask(){
-        // Criado tag li que possui a classe task e 
+plusButton.addEventListener('click', (evento) => {
+        if(task.value!=''){
+                    // Criando um objeto
+        const taskObject = {
+            "task": task.value,
+            "id":id
+        }
+            if(itens.length>=10){
+                alert("Excedido número de tarefas");
+            }
+            else{
+                // Atualiza minha lista
+                createTask(taskObject);
+                console.log(itens.length);
+
+                // Inserindo um objeto no array (Sequencia de objetos)
+                itens.push(taskObject);
+
+                // Setando no localStorage o array e transformando mem string o array de objetos
+                localStorage.setItem("tasks",JSON.stringify(itens));
+                // Zerando o display
+                task.value='';
+            }
+        }
+        else{
+            alert("Please, insert a task!")
+        }
+})
+
+clearButton.addEventListener('click', () => {
+    clearTask();
+;})
+function createTask(newItem){
+    // Criado tag li que possui a classe task e 
     // o data-atributtes data-id
     const newTask = document.createElement("li");
     newTask.classList.add('task');
     newTask.setAttribute('data-id',id);
 
-    
-
-    const deleteTask = document.createElement("button");
-    deleteTask.classList.add('delete-task');
-
- 
-    newTask.innerHTML = task.value;
+    newTask.innerHTML = newItem.task;
     list.appendChild(newTask);
-    id++;
-
-
-
-
-    // // Criado tag li que possui a classe task e 
-    // // o data-atributtes data-id
-    // const newTask = document.createElement("li");
-    // 
-    // newTask.classList.add('task');
-    // newTask.setAttribute('data-id',id);
-    // newTask.innerHTML = task.value;
-    // 
-    
-    // 
-    // list.appendChild(newTask);
-    // id++;
+    id++;   
 }
 function clearTask(){
     while (list.firstChild) {
         list.removeChild(list.firstChild);
         id=0;
       }
+      localStorage.clear()
 }
